@@ -15,7 +15,7 @@ export function Game({ onExit }: GameProps) {
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [timeLeft, setTimeLeft] = useState(30);
-  
+
   const [isRevealed, setIsRevealed] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [answerStatus, setAnswerStatus] = useState<'idle' | 'correct' | 'wrong'>('idle');
@@ -32,7 +32,7 @@ export function Game({ onExit }: GameProps) {
   const generateOptions = (movie: MoviePalette) => {
     const similarOptions = MOVIE_PALETTES.filter(m => m.id !== movie.id && m.colorTheme === movie.colorTheme);
     const otherOptions = MOVIE_PALETTES.filter(m => m.id !== movie.id && m.colorTheme !== movie.colorTheme);
-    
+
     similarOptions.sort(() => 0.5 - Math.random());
     otherOptions.sort(() => 0.5 - Math.random());
 
@@ -53,10 +53,10 @@ export function Game({ onExit }: GameProps) {
 
   const handleGuess = (id: string) => {
     if (isRevealed) return;
-    
+
     setSelectedAnswer(id);
     setIsRevealed(true);
-    
+
     if (id === currentMovie.id) {
       setAnswerStatus('correct');
       setScore(s => s + 100 + (streak * 10) + timeLeft);
@@ -92,7 +92,7 @@ export function Game({ onExit }: GameProps) {
   }, [timeLeft, isRevealed]);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
@@ -101,7 +101,7 @@ export function Game({ onExit }: GameProps) {
     >
       {/* Top Navbar */}
       <header className="flex items-center justify-between z-10 glass-card px-6 py-4 rounded-2xl shadow-sm">
-        <button 
+        <button
           onClick={onExit}
           className="flex items-center gap-2 text-[#8A939B] hover:text-[#00E054] transition-colors"
         >
@@ -120,7 +120,7 @@ export function Game({ onExit }: GameProps) {
               00:{timeLeft.toString().padStart(2, '0')}
             </span>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Flame size={18} className={streak > 2 ? 'text-orange-500' : 'text-neutral-500'} />
             <span className="font-mono text-xl text-white">{streak}</span>
@@ -135,7 +135,7 @@ export function Game({ onExit }: GameProps) {
 
       {/* Main Game Area */}
       <div className="flex-1 flex flex-col justify-center max-w-5xl mx-auto w-full">
-        
+
         {/* Removed category badge */}
 
         {/* The Giant Palette Strip */}
@@ -147,9 +147,9 @@ export function Game({ onExit }: GameProps) {
             {options.map((option, idx) => {
               const isSelected = selectedAnswer === option.id;
               const isCorrectTarget = option.id === currentMovie.id;
-              
+
               let btnClass = "bg-[#1C2228] border-[#2C3440] hover:bg-[#2C3440] hover:border-[#00E054] text-white";
-              
+
               if (isRevealed) {
                 if (isCorrectTarget) {
                   btnClass = "bg-[#00E054]/20 border-[#00E054] text-white text-glow-neon";
@@ -193,9 +193,8 @@ export function Game({ onExit }: GameProps) {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20 }}
-            className={`fixed bottom-10 left-1/2 -translate-x-1/2 px-8 py-4 rounded-md glass-card border backdrop-blur-3xl z-50 flex items-center gap-3 shadow-lg ${
-              answerStatus === 'correct' ? 'border-[#00E054] text-[#00E054]' : 'border-red-500 text-red-500'
-            }`}
+            className={`fixed bottom-10 left-1/2 -translate-x-1/2 px-8 py-4 rounded-md glass-card border backdrop-blur-3xl z-50 flex items-center gap-3 shadow-lg ${answerStatus === 'correct' ? 'border-[#00E054] text-[#00E054]' : 'border-red-500 text-red-500'
+              }`}
           >
             {answerStatus === 'correct' ? (
               <>

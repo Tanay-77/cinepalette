@@ -13,7 +13,7 @@ interface HeroProps {
 export function Hero({ onPlay }: HeroProps) {
   // State for particles only
   // Floating Particles
-  const [particles] = useState<{w: number, h: number, l: string, t: string, dy: number[], dx: number[], dur: number, del: number}[]>(() => {
+  const [particles] = useState<{ w: number, h: number, l: string, t: string, dy: number[], dx: number[], dur: number, del: number }[]>(() => {
     if (typeof window === 'undefined') return [];
     return [...Array(15)].map(() => ({
       w: Math.random() * 100 + 50,
@@ -33,7 +33,7 @@ export function Hero({ onPlay }: HeroProps) {
   }, []);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, filter: 'blur(10px)', scale: 1.1 }}
@@ -59,7 +59,7 @@ export function Hero({ onPlay }: HeroProps) {
           <span>Cinematic Experience</span>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -68,7 +68,7 @@ export function Hero({ onPlay }: HeroProps) {
           Can You Guess the <br className="hidden sm:block" /> Movie From Its Colors?
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
@@ -77,13 +77,13 @@ export function Hero({ onPlay }: HeroProps) {
           Every film has a visual fingerprint. Test your cinephile knowledge in the ultimate color palette challenge.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
         >
-          <button 
+          <button
             onClick={onPlay}
             className="group relative inline-flex h-14 items-center justify-center gap-3 overflow-hidden rounded-md bg-[#00E054] px-8 font-medium text-white transition-all hover:scale-105 active:scale-95"
           >
