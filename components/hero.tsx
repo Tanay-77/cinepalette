@@ -44,7 +44,7 @@ export function Hero({ onPlay }: HeroProps) {
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <ImageTrail
           items={MOVIE_PALETTES.map(m => m.posterUrl) as never[]}
-          variant="1"
+          variant={1}
         />
       </div>
 
