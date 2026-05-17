@@ -1,0 +1,6 @@
+{
+  "name": "CinePalette",
+  "description": "A cinematic movie guessing game where users identify films from generated color palette timelines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
