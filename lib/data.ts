@@ -5,6 +5,7 @@ export interface MoviePalette {
   director: string;
   category: string;
   barcodeUrl: string; // The URL to the real movie barcode image
+  posterUrl: string; // The URL to the real movie poster image
   colorTheme: 'green' | 'blue' | 'orange' | 'pink' | 'red';
 }
 
@@ -16,6 +17,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Denis Villeneuve",
     category: "Sci-Fi",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Blade-Runner-2049-color-of-cinema-1200x500.png",
+    posterUrl: "https://i.pinimg.com/1200x/2d/d5/02/2dd502fffcb78eb63c3b9ba5a7607cc5.jpg",
     colorTheme: "orange"
   },
   {
@@ -25,6 +27,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "James Cameron",
     category: "Romance",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Titanic-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/10/27/09/102709a174fa7c0c9740e5ed1705f548.jpg",
     colorTheme: "blue"
   },
   {
@@ -34,6 +37,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Steven Spielberg",
     category: "Thriller",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2022/06/Jaws-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/20/41/f6/2041f61f1c54f6fcd66d101f9e1ced19.jpg",
     colorTheme: "blue"
   },
   {
@@ -43,6 +47,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "The Wachowskis",
     category: "Sci-Fi",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/The-Matrix-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/1d/80/85/1d8085e37c443d07f9f383b7cd178a98.jpg",
     colorTheme: "green"
   },
   {
@@ -52,6 +57,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Todd Phillips",
     category: "Drama",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2020/02/Joker-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/ab/93/99/ab9399d4928087e66e3db782b554c70b.jpg",
     colorTheme: "green"
   },
   {
@@ -61,6 +67,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Barry Jenkins",
     category: "Drama",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Moonlight-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/5a/fc/2a/5afc2a476296eb2d675f9331df4424b3.jpg",
     colorTheme: "blue"
   },
   {
@@ -70,6 +77,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Jean-Pierre Jeunet",
     category: "Romance",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2020/05/Am%C3%A9lie-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/34/75/b0/3475b0f1b19fb8d057a7765569ec9c31.jpg",
     colorTheme: "green"
   },
   {
@@ -79,9 +87,9 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "George Miller",
     category: "Action",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2020/02/Mad-Max-Fury-Road-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/0e/c4/97/0ec497104b9643e9adf2998765773af1.jpg",
     colorTheme: "orange"
   },
-  // --- New additions for difficulty scaling ---
   {
     id: "m9",
     title: "Interstellar",
@@ -89,6 +97,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Christopher Nolan",
     category: "Sci-Fi",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Interstellar-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/36/65/6e/36656e1fabeb3f61c484794490c65abf.jpg",
     colorTheme: "green"
   },
   {
@@ -98,6 +107,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "James Cameron",
     category: "Sci-Fi",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Avatar-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/40/0f/c9/400fc9b652cc7c2881d928f17807e8ae.jpg",
     colorTheme: "blue"
   },
   {
@@ -107,6 +117,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Denis Villeneuve",
     category: "Sci-Fi",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2021/12/Dune-2021-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/8f/da/b3/8fdab34821e24a443003d0d8bcbf357b.jpg",
     colorTheme: "orange"
   },
   {
@@ -116,6 +127,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Ridley Scott",
     category: "Sci-Fi",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/The-Martian-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/40/0f/c9/400fc9b652cc7c2881d928f17807e8ae.jpg",
     colorTheme: "orange"
   },
   {
@@ -125,6 +137,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "David Fincher",
     category: "Drama",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Fight-Club-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/61/ce/0b/61ce0b0ba064d3d4371d3e61a31d548e.jpg",
     colorTheme: "green"
   },
   {
@@ -134,6 +147,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "David Fincher",
     category: "Thriller",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Seven-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/97/ac/2e/97ac2e3a2bb4e23f1699746380f218c1.jpg",
     colorTheme: "green"
   },
   {
@@ -143,6 +157,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Greta Gerwig",
     category: "Comedy",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2023/09/Barbie-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/1200x/c1/d4/26/c1d42613921a3574d3fb81d53f4db629.jpg",
     colorTheme: "pink"
   },
   {
@@ -152,6 +167,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Damien Chazelle",
     category: "Musical",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/La-La-Land-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/8f/6d/0e/8f6d0ec3205a2f67062c6d466c6dc35c.jpg",
     colorTheme: "blue"
   },
   {
@@ -161,6 +177,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Ang Lee",
     category: "Adventure",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/05/Life-of-Pi-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/f5/21/44/f52144dc5ed9718a3f6abe1917abfa0f.jpg",
     colorTheme: "green"
   },
   {
@@ -170,6 +187,7 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     director: "Chad Stahelski",
     category: "Action",
     barcodeUrl: "https://www.colorofcinema.com/wp-content/uploads/2019/11/John-Wick-color-of-cinema-800x451.png",
+    posterUrl: "https://i.pinimg.com/736x/41/a5/42/41a5420f5f904f54dad88a9d778b84ab.jpg",
     colorTheme: "blue"
   }
 ];

@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Play, Users, Film } from 'lucide-react';
 import { MOVIE_PALETTES } from '@/lib/data';
 import { useMemo, useEffect, useState } from 'react';
+import ImageTrail from './ImageTrail';
 
 interface HeroProps {
   onPlay: () => void;
@@ -39,23 +40,12 @@ export function Hero({ onPlay }: HeroProps) {
       transition={{ duration: 0.8, ease: "easeInOut" }}
       className="relative flex flex-col items-center justify-center min-h-screen z-10 p-6 md:p-12"
     >
-      {/* Background Animated Barcodes */}
-      <div className="absolute top-1/2 left-0 w-[200vw] h-[60vh] -translate-y-1/2 -rotate-6 opacity-[0.15] pointer-events-none overflow-hidden flex z-[-1]">
-        <motion.div 
-          animate={{ x: "-50%" }}
-          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-          className="flex h-full w-[200vw] gap-4"
-        >
-          {/* Scroll real movie barcodes seamlessly */}
-          {[...MOVIE_PALETTES, ...MOVIE_PALETTES, ...MOVIE_PALETTES, ...MOVIE_PALETTES].map((movie, i) => (
-            <img 
-              key={i} 
-              src={movie.barcodeUrl} 
-              alt="" 
-              className="h-full w-[30vw] object-cover rounded-xl shadow-lg" 
-            />
-          ))}
-        </motion.div>
+      {/* Background Image Trail */}
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
+        <ImageTrail
+          items={MOVIE_PALETTES.map(m => m.posterUrl) as never[]}
+          variant="1"
+        />
       </div>
 
       <div className="max-w-4xl w-full text-center space-y-8">
