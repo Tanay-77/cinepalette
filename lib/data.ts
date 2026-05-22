@@ -191,3 +191,31 @@ export const MOVIE_PALETTES: MoviePalette[] = [
     colorTheme: "blue"
   }
 ];
+
+export const DUMMY_MOVIES: MoviePalette[] = [
+  { id: "d1", title: "The Godfather", year: 1972, director: "Francis Ford Coppola", category: "Crime", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d2", title: "Pulp Fiction", year: 1994, director: "Quentin Tarantino", category: "Crime", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d3", title: "The Dark Knight", year: 2008, director: "Christopher Nolan", category: "Action", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d4", title: "Inception", year: 2010, director: "Christopher Nolan", category: "Sci-Fi", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d5", title: "Forrest Gump", year: 1994, director: "Robert Zemeckis", category: "Drama", barcodeUrl: "", posterUrl: "", colorTheme: "green" },
+  { id: "d6", title: "The Shawshank Redemption", year: 1994, director: "Frank Darabont", category: "Drama", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d7", title: "Goodfellas", year: 1990, director: "Martin Scorsese", category: "Crime", barcodeUrl: "", posterUrl: "", colorTheme: "red" },
+  { id: "d8", title: "The Lord of the Rings", year: 2001, director: "Peter Jackson", category: "Fantasy", barcodeUrl: "", posterUrl: "", colorTheme: "green" },
+  { id: "d9", title: "Gladiator", year: 2000, director: "Ridley Scott", category: "Action", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d10", title: "Jurassic Park", year: 1993, director: "Steven Spielberg", category: "Sci-Fi", barcodeUrl: "", posterUrl: "", colorTheme: "green" },
+  { id: "d11", title: "The Silence of the Lambs", year: 1991, director: "Jonathan Demme", category: "Thriller", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d12", title: "Saving Private Ryan", year: 1998, director: "Steven Spielberg", category: "War", barcodeUrl: "", posterUrl: "", colorTheme: "green" },
+  { id: "d13", title: "Schindler's List", year: 1993, director: "Steven Spielberg", category: "Biography", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d14", title: "The Departed", year: 2006, director: "Martin Scorsese", category: "Crime", barcodeUrl: "", posterUrl: "", colorTheme: "green" },
+  { id: "d15", title: "Whiplash", year: 2014, director: "Damien Chazelle", category: "Drama", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d16", title: "The Prestige", year: 2006, director: "Christopher Nolan", category: "Mystery", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d17", title: "The Lion King", year: 1994, director: "Roger Allers", category: "Animation", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d18", title: "Star Wars: Episode IV", year: 1977, director: "George Lucas", category: "Sci-Fi", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d19", title: "Spirited Away", year: 2001, director: "Hayao Miyazaki", category: "Animation", barcodeUrl: "", posterUrl: "", colorTheme: "pink" },
+  { id: "d20", title: "Parasite", year: 2019, director: "Bong Joon Ho", category: "Thriller", barcodeUrl: "", posterUrl: "", colorTheme: "green" },
+  { id: "d21", title: "The Truman Show", year: 1998, director: "Peter Weir", category: "Comedy", barcodeUrl: "", posterUrl: "", colorTheme: "blue" },
+  { id: "d22", title: "WALL-E", year: 2008, director: "Andrew Stanton", category: "Animation", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d23", title: "Everything Everywhere", year: 2022, director: "Daniel Kwan", category: "Sci-Fi", barcodeUrl: "", posterUrl: "", colorTheme: "pink" },
+  { id: "d24", title: "No Country for Old Men", year: 2007, director: "Ethan Coen", category: "Crime", barcodeUrl: "", posterUrl: "", colorTheme: "orange" },
+  { id: "d25", title: "Spider-Man: Into the Spider-Verse", year: 2018, director: "Bob Persichetti", category: "Animation", barcodeUrl: "", posterUrl: "", colorTheme: "pink" }
+];

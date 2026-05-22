@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, Clock, Flame, Info, Trophy, Heart } from 'lucide-react';
-import { MOVIE_PALETTES, MoviePalette } from '@/lib/data';
+import { MOVIE_PALETTES, MoviePalette, DUMMY_MOVIES } from '@/lib/data';
 import { PaletteStrip } from './palette-strip';
 
 interface GameProps {
@@ -30,13 +30,19 @@ export function Game({ onExit }: GameProps) {
 
   // Move generateOptions up so we can use it for initial state
   const generateOptions = (movie: MoviePalette) => {
-    const similarOptions = MOVIE_PALETTES.filter(m => m.id !== movie.id && m.colorTheme === movie.colorTheme);
-    const otherOptions = MOVIE_PALETTES.filter(m => m.id !== movie.id && m.colorTheme !== movie.colorTheme);
+    const allOtherMovies = [...MOVIE_PALETTES, ...DUMMY_MOVIES].filter(m => m.id !== movie.id);
+    
+    const similarOptions = allOtherMovies.filter(m => m.colorTheme === movie.colorTheme);
+    const otherOptions = allOtherMovies.filter(m => m.colorTheme !== movie.colorTheme);
 
     similarOptions.sort(() => 0.5 - Math.random());
     otherOptions.sort(() => 0.5 - Math.random());
 
-    const wrongOptions = [...similarOptions, ...otherOptions].slice(0, 3);
+    // Pick 1 similar option (if available) to be tricky, and fill the rest with random options
+    const wrongSimilar = similarOptions.slice(0, 1);
+    const wrongOther = otherOptions.slice(0, 3 - wrongSimilar.length);
+
+    const wrongOptions = [...wrongSimilar, ...wrongOther];
     return [...wrongOptions, movie].sort(() => 0.5 - Math.random());
   };
 
