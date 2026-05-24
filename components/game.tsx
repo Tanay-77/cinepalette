@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, Clock, Flame, Info, Trophy, Heart } from 'lucide-react';
+import { ChevronLeft, Clock, Flame, Info, Trophy, Heart, Coffee } from 'lucide-react';
 import { MOVIE_PALETTES, MoviePalette, DUMMY_MOVIES } from '@/lib/data';
 import { PaletteStrip } from './palette-strip';
 
@@ -188,7 +188,17 @@ export function Game({ onExit }: GameProps) {
           </AnimatePresence>
         </div>
 
-        {/* Removed hint buttons */}
+        <div className="mt-8 flex justify-center md:justify-end w-full">
+          <a 
+            href="https://dodo.pe/iqxx9v9ujjd" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 text-[#8A939B] hover:text-white transition-colors text-sm font-medium"
+          >
+            <Coffee className="w-4 h-4" />
+            Buy me a coffee
+          </a>
+        </div>
 
       </div>
 
